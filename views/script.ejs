@@ -1,0 +1,12 @@
+<script>
+    const todosChecks = document.querySelectorAll(".todo #myCheck");
+    const todosForms = document.querySelectorAll(".todo .checking");
+
+
+    todosChecks.forEach((check,index)=>{
+        check.addEventListener('click',()=>{
+            todosForms[index].submit();
+        })
+    })
+
+</script>

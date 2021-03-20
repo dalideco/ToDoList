@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0 ;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 20px; 
+        }
+        input{
+            font-size: 1rem;
+        }
+
+        body{
+            font-family: 'Roboto', sans-serif;
+            position: relative; 
+            line-height: 1.5em ; 
+            background: #ccc;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+
+        }
+
+        .main{
+            background: rgb(0, 155, 103); 
+            color:white;
+            padding: 30px;
+            box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.2) ;
+            border-radius: 10px;
+        }
+        .main > form {
+            display: flex;
+            align-items: stretch;
+            height: 40px;
+            border-radius:10px; 
+            border: 3px solid rgb(1, 187, 125);
+            overflow:hidden;
+            position: relative;
+        }
+        .main > form input{
+            flex:1;
+            border: none;
+        }
+        .main > form > *:focus{
+            outline: none;
+        }
+        .main > form button{
+            border : none;
+            background : #ccc;
+        }
+        .main > form button:hover{
+            background :rgb(155, 155, 155)
+        }
+        .main div,.main form{
+            margin:20px 0;
+        }
+        .todo{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .todo form{
+            display:flex;
+            justify-content: space-between;
+            align-items:center;
+            margin: 0;
+        }
+        .todo input{
+            width: 30px;
+            height: 30px; 
+            border-radius: 50% !important;
+            box-sizing: border-box;
+            border: 2px blue solid; 
+        }
+        .todo p{
+            padding: 5px 20px; 
+        }
+        .todo input:checked+p{
+            text-decoration: line-through;
+            text-decoration-color: red;
+            text-decoration-style: wavy;
+        }
+        .reddened{
+            cursor:pointer;
+            color:white; 
+            background: red; 
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            border : none; 
+            text-decoration:  none;
+        }
+    </style>
+</head>

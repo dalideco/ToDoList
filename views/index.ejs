@@ -1,0 +1,33 @@
+<%-include("header")-%>
+<body>
+    <div class="main">
+        <h1><%= listName %> </h1>
+        <form action="/add-todo" method="post">
+            
+            <input type="text" placeholder="add Todo" name="newTodo" value="">
+            <button type="submit">Add</button>
+            <input type="hidden" name="theName" value="<%=listName%>">
+        </form>
+        <div class="myTodos">
+            <% todos.forEach( todo =>{%>
+                <div class="todo">
+                    <form action="/checking" method="post" class="checking">
+                        <input type="checkbox" name="" id="myCheck" <%if(todo.checked){%> checked<%}%> >
+                        <p><%=todo.name%></p>
+                        <input type="hidden" name="theId" value="<%=todo._id%>">
+                        <input type="hidden" name="theName" value="<%=listName%>">
+                    </form>
+                    
+                    <form action="/remove" method="post">
+                        <input type="hidden" name="getTheId" value="<%=todo._id%>">
+                        <button class ="reddened" type="submit">x</button>
+                        <input type="hidden" name="theName" value="<%=listName%>">
+                    </form>
+                </div>
+            <%})%>
+        </div>
+    </div>
+
+    <%- include('script') %> 
+</body>
+</html>
